@@ -9,7 +9,13 @@ public class app {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter five numbers :");
         for (int i = 0; i <= 5; i++) {
-            list.add(scanner.nextInt());
+            String count = scanner.nextLine();
+            try {
+                Integer num = Integer.parseInt(count);
+                list.add(num);
+            } catch (NumberFormatException e) {
+                System.out.println("Error " + e.getMessage() + " , enter number :");
+            }
         }
 
         InsertionSort insertionSort = new InsertionSort(list);
