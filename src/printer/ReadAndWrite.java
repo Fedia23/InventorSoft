@@ -1,6 +1,7 @@
 package printer;
 
 import sort.InsertionSort;
+import sort.MergeSort;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,9 +29,9 @@ public class ReadAndWrite {
         InsertionSort insertionSort = new InsertionSort(list);
         insertionSort.sortNumberAscending();
 
+//        MergeSort mergeSort = new MergeSort();
+//        mergeSort.sortNumbers(list);
         System.out.println("Result of sorting :");
         list.stream().forEach(s -> System.out.println(s));
     }
-
-
 }
