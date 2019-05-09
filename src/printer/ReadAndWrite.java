@@ -1,7 +1,9 @@
 package printer;
 
+import sort.HeapSort;
 import sort.InsertionSort;
 import sort.MergeSort;
+import sort.QuickSort;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -26,11 +28,18 @@ public class ReadAndWrite {
     }
 
     public void writeList() {
-        InsertionSort insertionSort = new InsertionSort(list);
-        insertionSort.sortNumberAscending();
+//        InsertionSort insertionSort = new InsertionSort(list);
+//        insertionSort.sortNumberAscending();
+
+        HeapSort heapSort = new HeapSort();
+        heapSort.sort(list);
+
+//        QuickSort quickSort = new QuickSort();
+//        quickSort.sort(list);
 
 //        MergeSort mergeSort = new MergeSort();
 //        mergeSort.sortNumbers(list);
+
         System.out.println("Result of sorting :");
         list.stream().forEach(s -> System.out.println(s));
     }
